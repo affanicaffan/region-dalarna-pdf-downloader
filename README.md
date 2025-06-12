@@ -57,5 +57,4 @@ requirements.txt    # Python dependencies
 
 ---
 
-*This tool helps curious visitors like journalists and Region Dalarna staff to efficiently download multiple PDF documents from the Netpublicator system.*# region-dalarna-pdf-downloader
-Generate JavaScript code to download Region Dalarna PDFs
+*This tool helps curious visitors like journalists and Region Dalarna staff to efficiently download multiple PDF documents from the Netpublicator system.*
