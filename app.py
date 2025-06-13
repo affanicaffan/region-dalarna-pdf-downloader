@@ -5,9 +5,11 @@ def main():
     st.title("Region Dalarna PDF Downloader")
     st.markdown("Generate JavaScript code to download PDFs directly in your browser")
     
+    st.markdown("On this website you can find Region Dalarna's meeting documents and political protocols: https://www.netpublicator.com/reader/r90521909")
+    
     # Step 1: Fetch filenames and store in session_state
     with st.form("fetch_form"):
-        url = st.text_input("Enter the Netpublicator URL:")
+        url = st.text_input("Enter the Netpublicator URL to the folder you want to search:")
         fetch_btn = st.form_submit_button("Fetch Filenames")
 
     if fetch_btn:
@@ -114,8 +116,17 @@ def main():
                 
                 with st.expander("First time only: Allow pasting in console and allow popups"):
                     st.markdown("""
-                    4. The first time you will need to pass a security test by writing "allow pasting" in the console when asked to
-                    5. Then you will get a popup blocker after the first file has downloaded. Change to "Tillåt alltid nedladdningar från..." and try again to get all files at once
+                    4. The first time you will need to pass a security test by writing "allow pasting" in the console after your first pasting attempt.
+                    5. Then you will get a popup blocker after the first file has downloaded. Change to "Tillåt alltid nedladdningar från..." and try step 3 again to get all files at once.
+                    """)
+
+                with st.expander("Troubleshooting"):
+                    st.markdown("""
+                    * If you are asked to select and confirm the download destination for each file, you can disable that by visiting **chrome://settings/downloads** in a new browser tab.
+                    
+                    * If you try to download more than 7 to 10 files, some browser tabs open and get stuck on a 503 error message. This means that Netpublicator can't handle all requests at once.
+                    
+                    But you can still click the "Hämta igen" buttons at the bottom of the opened tabs, or press enter in the address field, to resume the download of each file. You will then have to close each tab manually. I am investigating how to work around this.
                     """)
             else:
                 st.info("Select files above to generate the JavaScript code for downloading.")
