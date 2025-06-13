@@ -51,9 +51,36 @@ src/
 requirements.txt    # Python dependencies
 ```
 
+## Local Installation
+Follow these step-by-step instructions to run the project locally:
+
+```bash
+# 0. Make sure your terminal is in the folder where you want to place the project folder. For example:
+cd C:\Users\alfre\Documents\ OR THE PATH YOU PREFER
+# 1. Clone the project from GitHub
+git clone https://github.com/affanicaffan/region-dalarna-pdf-downloader.git
+cd region-dalarna-pdf-downloader
+# 2. (Optional, works without too) Create and activate virtual environment (recommended)
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On Linux/Mac:
+# source venv/bin/activate
+# You should now see (venv) in your terminal prompt
+# 3. Install Python dependencies
+pip install -r requirements.txt
+# 4. Install Chrome browser (required for Selenium)
+# On Windows: Download from chrome.google.com
+# On Linux: sudo apt-get install chromium-browser
+# 5. Start the Streamlit app and use it the same way as the cloud version
+**streamlit run app.py**
+# To deactivate the virtual environment later (optional):
+# deactivate
+```
+
 ## Live App
 
-[Deployed app URL will be here after Streamlit Cloud deployment]
+https://region-dalarna-pdf-downloader.streamlit.app/
 
 ---
 
